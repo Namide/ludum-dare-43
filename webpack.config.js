@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
 
@@ -10,6 +9,14 @@ module.exports = {
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, 'dist')
+    },
+
+    devServer: {
+        // hot: true,
+        port: 3000,
+        historyApiFallback: {
+            index: 'index.html'
+        }
     },
 
     plugins: [
@@ -25,7 +32,6 @@ module.exports = {
                 arr.shift()
                 return arr.join('/')
             }
-        }]),
-        new CleanWebpackPlugin(['dist'])
+        }])
     ]
 }
