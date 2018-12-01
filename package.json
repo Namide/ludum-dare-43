@@ -4,12 +4,14 @@
     "description": "Game created in one weekend during the Ludum Dare #43",
     "main": "src/main.js",
     "dependencies": {
+        "bezier-easing": "^2.1.0",
         "contro": "^2.1.2",
         "pixi.js": "^4.8.2"
     },
     "devDependencies": {
         "copy-webpack-plugin": "^4.6.0",
         "css-loader": "^1.0.1",
+        "file-loader": "^2.0.0",
         "html-webpack-plugin": "^3.2.0",
         "node-sass": "^4.10.0",
         "sass-loader": "^7.1.0",
