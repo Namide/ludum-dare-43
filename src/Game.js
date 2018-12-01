@@ -1,6 +1,6 @@
-import DomSystem from './system/DomSystem'
-import GraphicSystem from './system/GraphicSystem';
-import ControllerSystem from './system/ControllerSystem';
+import DomSystem from './systems/DomSystem'
+import GraphicSystem from './systems/GraphicSystem';
+import ControllerSystem from './systems/ControllerSystem';
 
 const FPS = 240
 
@@ -19,7 +19,14 @@ export default class Game
 
     tick(jumpFrame = false, dt = 1000 / FPS)
     {
-        this.controllerSystem.tick(jumpFrame)
+        // this.controllerSystem.tick(jumpFrame)
+// console.log(this.controllerSystem.downReleased())
+        if (this.controllerSystem.downPressed())
+            console.log('DOWN')
+
+        if (this.controllerSystem.downReleased())
+            console.log('!!!!!DOWN')
+
         // console.log('JUMP FRAME:' + jumpFrame, this.controllerSystem.validPressed(), this.controllerSystem.validReleased())
     }
 

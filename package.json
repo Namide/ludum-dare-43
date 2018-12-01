@@ -4,6 +4,7 @@
     "description": "Game created in one weekend during the Ludum Dare #43",
     "main": "src/main.js",
     "dependencies": {
+        "contro": "^2.1.2",
         "pixi.js": "^4.8.2"
     },
     "devDependencies": {
