@@ -33,5 +33,16 @@ module.exports = {
                 return arr.join('/')
             }
         }])
-    ]
+    ],
+
+    module: {
+        rules: [{
+            test: /\.sass$/,
+            use: [
+                "style-loader",
+                "css-loader",
+                "sass-loader"
+            ]
+        }]
+    }
 }
